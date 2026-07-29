@@ -1,0 +1,20 @@
+import canonicalLaneMathlib.AdmissibleClass
+import HautevilleHouse.ChemicalEngineeringBioprocessEngineeringTheoremCanonicalLaneLean.ReactionKinetics
+import HautevilleHouse.ChemicalEngineeringBioprocessEngineeringTheoremCanonicalLaneLean.MassTransfer
+import HautevilleHouse.ChemicalEngineeringBioprocessEngineeringTheoremCanonicalLaneLean.BioreactorOperation
+import HautevilleHouse.ChemicalEngineeringBioprocessEngineeringTheoremCanonicalLaneLean.Thermodynamics
+import HautevilleHouse.ChemicalEngineeringBioprocessEngineeringTheoremCanonicalLaneLean.EnzymeKinetics
+import HautevilleHouse.ChemicalEngineeringBioprocessEngineeringTheoremCanonicalLaneLean.MetabolicFluxAnalysis
+
+namespace HautevilleHouse
+namespace ChemicalEngineeringBioprocessEngineeringTheoremCanonicalLaneLean
+
+def ConstrainedBioprocessEngineeringClosure (A : AdmissibleClass) : Prop :=
+  bridgeClosed A ∧ gateClosed A
+
+theorem constrained_bioprocess_engineering_endgame (A : AdmissibleClass) :
+    ConstrainedBioprocessEngineeringClosure A := by
+  exact And.intro (bridge_from_admissible_class A) (gate_from_admissible_class A)
+
+end ChemicalEngineeringBioprocessEngineeringTheoremCanonicalLaneLean
+end HautevilleHouse
